@@ -21,6 +21,14 @@ const UserSchema = new mongoose.Schema({
         required: true,
         select: false, //para quando buscar um usuario ou varios (usuarios) a informação da senha não venha com o array
     },
+    passwordResetToken: {
+        type: String,
+        select: false,
+    },
+    passwordResetExpires: {
+        type: Date,
+        select: false,
+    },
     createdAt: { //anota a data que o registro foi criado
         type: Date, 
         default: Date.now,
